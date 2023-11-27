@@ -1,0 +1,9 @@
+ /* clase resaltado y oculto para ejemplos estilos desde javscript */
+
+ .resaltado {
+     color: red;
+     font-weight: bold;
+ }
+ .oculto {
+     display: none;
+ }

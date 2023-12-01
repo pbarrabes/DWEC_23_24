@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <script src="validacion.js"></script>
+    <link rel="stylesheet" href="validacion.css">
+</head>
+<body>
+    <h1>Registro de Usuario</h1>
+    <form action="enviado.html" id="formulario">
+        <label for="nombre">Nombre:<span class="obligatorio">*<span></span></label>
+        <input type="text" id="nombre" name="nombre">
+        <span id="errorNombre"></span>
+        <br>
+        <label for="apellidos">Apellidos:<span class="obligatorio">*<span></span></label>
+        <input type="text" id="apellidos" name="apellidos">
+        <span id="errorApellidos"></span>
+        <br>
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email">
+        <span id="errorEmail"></span>
+        <br>
+        <label for="DNI">DNI:<span class="obligatorio">*<span></span></label>
+        <input type="text" id="DNI" name="DNI">
+        <span id="errorDNI"></span>
+        <br>
+        <label for="username">Username:<span class="obligatorio">*<span></span></label>
+        <input type="text" id="username" name="username">
+        <span id="errorUsername"></span>
+        <br>
+        <label for="password">Contraseña:<span class="obligatorio">*<span></label>
+        <input type="password" id="password" name="password">
+        <span id="errorPassword"></span>
+        <br>
+        <label for="password2">Repetir Contraseña:<span class="obligatorio">*<span></span></label>
+        <input type="password" id="password2" name="password2">
+        <span id="errorPassword2"></span>
+        <br>
+        <label for="avisos">Deseas recibir avisos comerciales?</label>
+        <input type="checkbox" name ="avisos" id="avisos">
+        <br>
+        <p>Los campos con <span class="obligatorio">*</span> son obligatorios</p>
+        <input type="submit" value="Registrarse"><div id="errorForm" class="obligatorio"></div>
+    </form>
+</body>
+</html>

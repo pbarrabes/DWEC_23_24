@@ -1,0 +1,15 @@
+.invalido {
+    background-color: #FFDDDD;
+    border: 1px solid #FF0000;
+}
+
+
+label {
+    display: inline-block;
+    width: 250px;
+}
+
+.obligatorio{
+    color: red;
+}
+

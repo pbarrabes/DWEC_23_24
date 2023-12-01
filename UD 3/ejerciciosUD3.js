@@ -93,7 +93,7 @@ function ejercicio8(e){
 Haz un juego en el que el usuario tenga que adivinar una letra  aleatoria del abecedario pulsando en el teclado 
 (No hay que introducirla en ningún campo de texto ni similar). Indicandole mayor o menor según el orden alfabético en un párrafo en el documento. 
 */
-document.addEventListener("DOMContentLoaded", ejercicio9);
+/* document.addEventListener("DOMContentLoaded", ejercicio9);
 function ejercicio9(e){
     const abecedario="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     let letraAleatoria=abecedario.charAt(Math.floor(Math.random()*abecedario.length));
@@ -108,4 +108,8 @@ function ejercicio9(e){
             document.getElementById("mostrarInformacion").innerText=`La letra es menor que ${letraPulsada}`;
         }
     })
-}
+} */
+
+/* EJERCICIO 10 VALIDACION FORMULARIO FICHERO APARTE */
+
+/* EJERCICIO 11*/

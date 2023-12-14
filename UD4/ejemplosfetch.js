@@ -10,8 +10,7 @@ function ejemploGet() {
                     //Aqui no me gusta la respuesta del servidor. 
                     //Opcion de lanzar un error, ojo, si no lo hago continua con el then siguiente
                 }
-            }
-            )
+            })
         .then(data => {
             //Aqui tengo lso datos en formato objet parseado del json recibido
             console.log(typeof data,data);
@@ -93,3 +92,59 @@ function ejemploDelete() {
         })
 }
 
+
+//Ejemplos con async await
+
+async function ejemploGetAsync() {
+    try{
+        let response = await fetch(URL_BASE+"posts");
+        if(response.ok){
+            try {
+                let data = await response.json();
+                console.log(typeof data,data);
+            } catch (error) {
+                //Gestion error al parsear el json
+            }
+        } else{
+            //Aqui no me gusta la respuesta del servidor. 
+            //LAnzo un error para que lo gestiones en el catch. ESte error es moptivado ya que la respuesta del servidor no es satisfactoria(404,500, etc)
+            throw new Error(response.status);
+        }
+    } catch(error){
+        //Gestion de errores
+        console.error(error);
+    }
+}
+
+async function ejemploPostAsync() { 
+    let data = {
+        title: 'ejemplo post',
+        body: 'ejemplo post body',
+        userId: 1
+    };
+    const options = {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    };
+    try{
+        let response = await fetch(URL_BASE+"posts",options);
+        if(response.ok){//Aqui obtengo la respuesta con el elemento insertado, podria usarlo para comprobar que la insercion tuvo exito.
+            try {
+                let data = await response.json();
+                console.log(data);
+            } catch (error) {
+                //Gestion error al parsear el json que me devuielve. Interpretar la situación.
+            }
+        } else{
+            //Aqui no me gusta la respuesta del servidor. 
+            //LAnzo un error para que lo gestiones en el catch. ESte error es moptivado ya que la respuesta del servidor no es satisfactoria(404,500, etc)
+            throw new Error(response.status);
+        }
+    } catch(error){
+        //Gestion de errores
+        console.error(error);
+    }
+}

@@ -1,0 +1,9 @@
+{  
+    "listas": [
+        {
+            "id": 1,
+            "nombreLista": "Lista 1",
+            "tareas": ["Tarea 1","Tarea 2"]
+        }
+    ]
+}
